@@ -35,6 +35,10 @@ public class ClickHandlerRegistry {
         return factoryOptional.map(factory -> factory.create(context));
     }
 
+    public ClickHandler createHandler(InventoryContext context) {
+        return findAndCreate("root", context).orElseThrow(() -> new IllegalStateException("Cannot find root factory for ClickHandler"));
+    }
+
     public interface ClickHandlerFacade {
 
         void handle(InventoryContext context, Player player, AbstractClickHandler handler);
