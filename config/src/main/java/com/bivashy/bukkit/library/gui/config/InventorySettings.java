@@ -1,6 +1,8 @@
 package com.bivashy.bukkit.library.gui.config;
 
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public interface InventorySettings {
 
@@ -8,10 +10,10 @@ public interface InventorySettings {
 
     String pageResolver();
 
-    String structure();
+    Optional<InventoryItem> pageIngredientItem();
 
-    Map<Character, String> mapping();
+    Map<Character, InventoryItem> mappingIngredients();
 
-    Map<String, InventoryItem> items();
+    List<String> structureLines();
 
 }
