@@ -9,14 +9,13 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>api</artifactId>
+    <artifactId>invui</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
@@ -30,8 +29,12 @@
         </dependency>
         <dependency>
             <groupId>com.bivashy.bukkit.library</groupId>
-            <artifactId>config</artifactId>
+            <artifactId>api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>xyz.xenondevs.invui</groupId>
+            <artifactId>invui</artifactId>
+            <type>pom</type>
         </dependency>
     </dependencies>
-
 </project>
