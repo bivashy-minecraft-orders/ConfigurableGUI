@@ -36,14 +36,14 @@ import static com.bivashy.bukkit.library.gui.api.click.ClickHandler.PLAYER;
 
 public class BaseInventoryFactory implements InventoryGUIFactory {
 
-    private final Map<String, GuiSettings> guis;
+    private final Map<String, ? extends GuiSettings> guis;
     private final InventoryContextRegistry contextRegistry;
     private final PageResolverRegistry pageResolverRegistry;
     private final ClickHandlerRegistry clickHandlerRegistry;
     private final InventoryComponentSerializer componentSerializer;
     private final ConfigurationTransformer transformer;
 
-    public BaseInventoryFactory(Map<String, GuiSettings> guis,
+    public BaseInventoryFactory(Map<String, ? extends GuiSettings> guis,
                                 InventoryContextRegistry contextRegistry,
                                 PageResolverRegistry pageResolverRegistry,
                                 ClickHandlerRegistry clickHandlerRegistry,
