@@ -12,12 +12,14 @@
         <module>config</module>
         <module>api</module>
         <module>invui</module>
+        <module>configurate</module>
     </modules>
 
     <properties>
         <spigot-api.version>1.19-R0.1-SNAPSHOT</spigot-api.version>
         <adventure-api.version>4.17.0</adventure-api.version>
         <invui.version>1.36</invui.version>
+        <configurate.version>4.1.2</configurate.version>
 
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -32,6 +34,10 @@
         <repository>
             <id>xenondevs</id>
             <url>https://repo.xenondevs.xyz/releases</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
@@ -52,6 +58,11 @@
                 <artifactId>invui</artifactId>
                 <version>${invui.version}</version>
                 <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.spongepowered</groupId>
+                <artifactId>configurate-core</artifactId>
+                <version>${configurate.version}</version>
             </dependency>
 
             <dependency>
