@@ -11,10 +11,15 @@
     <modules>
         <module>config</module>
         <module>api</module>
+        <module>invui</module>
+        <module>configurate</module>
     </modules>
 
     <properties>
         <spigot-api.version>1.19-R0.1-SNAPSHOT</spigot-api.version>
+        <adventure-api.version>4.17.0</adventure-api.version>
+        <invui.version>1.36</invui.version>
+        <configurate.version>4.1.2</configurate.version>
 
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -26,6 +31,14 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+            <id>xenondevs</id>
+            <url>https://repo.xenondevs.xyz/releases</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <dependencyManagement>
@@ -36,8 +49,30 @@
                 <version>${spigot-api.version}</version>
             </dependency>
             <dependency>
+                <groupId>net.kyori</groupId>
+                <artifactId>adventure-api</artifactId>
+                <version>${adventure-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xyz.xenondevs.invui</groupId>
+                <artifactId>invui</artifactId>
+                <version>${invui.version}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.spongepowered</groupId>
+                <artifactId>configurate-core</artifactId>
+                <version>${configurate.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.bivashy.bukkit.library</groupId>
                 <artifactId>config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bivashy.bukkit.library</groupId>
+                <artifactId>api</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
